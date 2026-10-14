@@ -1,0 +1,10 @@
+pyyaml
+scipy
+numpy
+openai-whisper
+soundfile
+datasets
+librosa
+transformers
+vocos
+encodec

@@ -1,0 +1,64 @@
+node_modules/
+frontend/node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.wav
+*.mp3
+*.flac
+
+data/raw/
+data/processed/
+data/augmented/
+
+# Training artifacts (checkpoints are large and regenerable)
+ml/artifacts/
+ml/artifacts_*.log
+
+# Generated manifests. Regenerate with ml/data/build_cache.py.
+# labels.csv is 2.4 MB for 2019 LA and would be ~100 MB once the 611k-trial
+# 2021 DF eval manifest is built, so it stays out of the repo. The small
+# summary files next to it (dataset_info, speakers, silence_leak_report) are
+# findings rather than bulk data and ARE tracked.
+data/metadata/labels.csv
+data/metadata/labels_*.csv
+
+# CallVault is now tracked in the main repo
+
+# Binary downloads
+*.AppImage
+
+# Debug recordings from media gateway
+media-gateway/debug-recordings/
+
+# Logs
+*.log
+
+# Demo relay (temporary dev tool)
+demo-relay/
+
+# User added datasets
+DATA_SET_DONT_PUSH/
+data/wavs/
+
+# model weights are provisioned out-of-band, not tracked (no LFS here)
+ml/deepfake_detection/indic/frozen/*.pth
+
+# Downloaded ECAPA metadata/cache; provision with the documented model download.
+models/ecapa/label_encoder.txt
+models/ecapa/.cache/
+:memory:.ses
