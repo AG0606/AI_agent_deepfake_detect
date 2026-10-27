@@ -41,7 +41,7 @@ def load_audio_file(file_bytes: bytes) -> tuple[np.ndarray, float]:
 @api_router.get("/config/fusion")
 async def get_fusion_config():
     return {"success": True, "weights": get_weights(), "calibrated": False,
-            "policy": "sih-evidence-v1", "score_kind": "synthetic_audio_evidence"}
+            "policy": "voiceshield-evidence-v1", "score_kind": "synthetic_audio_evidence"}
 
 @api_router.put("/config/fusion")
 async def update_fusion_config(payload: dict):

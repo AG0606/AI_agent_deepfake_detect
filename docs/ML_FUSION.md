@@ -1,6 +1,6 @@
 # ML evidence and fusion policy
 
-The active policy is `sih-evidence-v1`. Its 0–100 result is **synthetic-audio evidence**, not a calibrated probability of fraud. See [the full model audit](research/SIH_MODEL_AUDIT.md) and [demo runbook](SIH_DEMO.md).
+The active policy is `voiceshield-evidence-v1`. Its 0–100 result is **synthetic-audio evidence**, not a calibrated probability of fraud. See [the full model audit](research/MODEL_AUDIT.md) and [demo runbook](DEMO_RUNBOOK.md).
 
 ## Default configuration
 

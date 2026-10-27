@@ -130,7 +130,7 @@ Updates Sentinel thresholds and weights in memory with bounds validation.
 ## 3. Acoustic Fusion Policy
 
 ### GET `/api/config/fusion`
-Returns configured detector weights for the `sih-evidence-v1` policy.
+Returns configured detector weights for the `voiceshield-evidence-v1` policy.
 
 ### PUT `/api/config/fusion`
 Updates fusion weights (must sum to 1.0).
@@ -219,7 +219,7 @@ Raw 48kHz mono 16-bit PCM bytes (288,000 bytes).
   "fusion": {
     "aiGeneratedScore": 0.88,
     "method": "weighted_mean",
-    "policy_version": "sih-evidence-v1"
+    "policy_version": "voiceshield-evidence-v1"
   },
   "risk": {
     "score": 88.0,

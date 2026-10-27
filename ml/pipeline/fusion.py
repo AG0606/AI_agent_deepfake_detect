@@ -70,7 +70,7 @@ def fuse(inference):
         for k, w in effective.items():
             detectors[k]["weight"] = w
         fusion = {"aiGeneratedScore": round(value, 4), "method": "weighted_mean",
-                  "policy_version": "sih-evidence-v1", "calibrated": False,
+                  "policy_version": "voiceshield-evidence-v1", "calibrated": False,
                   "weights": effective, "contributions": {k: round(scores[k] * effective[k], 4) for k in effective},
                   "coverage": round(total, 4), "score_spread": round(max(scores.values()) - min(scores.values()), 4)}
         missing = [k for k, w in weights.items() if w > 0 and k not in scores]

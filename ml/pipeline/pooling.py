@@ -26,7 +26,7 @@ def pool_responses(windows):
                       "recommended_action": "COLLECT_MORE_AUDIO" if mean is None else "SECONDARY_VERIFICATION" if reasons or mean >= .4 else "CONTINUE_WITH_CAUTION"}
     result["fusion"] = None if mean is None else {
         "aiGeneratedScore": round(mean, 4), "method": "mean_valid_windows", "calibrated": False,
-        "weights": {}, "contributions": {}, "policy_version": "sih-evidence-v1"}
+        "weights": {}, "contributions": {}, "policy_version": "voiceshield-evidence-v1"}
     for name in result["detectors"]:
         observations = [w["detectors"][name] for w in usable if valid_score(w["detectors"][name]["score"])]
         result["detectors"][name] = {"score": sum(x["score"] for x in observations)/len(observations) if observations else None,

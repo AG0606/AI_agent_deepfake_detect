@@ -944,7 +944,7 @@ private fun MediaGatewaySection(
     var isTesting by remember { mutableStateOf(false) }
     var testResult by remember { mutableStateOf<Result<Unit>?>(null) }
     
-    SettingsSection(title = "Media Gateway (Hackathon)", expanded = expanded, onToggle = onToggle) {
+    SettingsSection(title = "Media Gateway", expanded = expanded, onToggle = onToggle) {
         SettingsToggleRow(
             icon = Icons.Filled.Cloud,
             label = "Stream Audio to Gateway",
@@ -972,7 +972,7 @@ private fun MediaGatewaySection(
                         scope.launch(Dispatchers.IO) {
                             try {
                                 // Simple mock test logic since okhttp isn't imported here
-                                // For the hackathon MVP, we just ensure the URL isn't empty.
+                                // For the prototype MVP, we just ensure the URL isn't empty.
                                 if (url.isBlank() || !url.startsWith("ws")) {
                                     throw Exception("Invalid WebSocket URL")
                                 }

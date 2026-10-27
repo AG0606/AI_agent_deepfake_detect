@@ -1,6 +1,6 @@
 # VoiceShield-AI Project Status
 
-> Single source of truth for the hackathon.
+> Single source of truth for the VoiceShield AI project.
 
 ## Current Checkpoint
 

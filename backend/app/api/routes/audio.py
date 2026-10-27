@@ -29,7 +29,7 @@ async def analyze_audio(file: UploadFile = File(...)):
         deepfake = analyze_deepfake(file.filename, audio_bytes)
         deepfake_prob = deepfake["deepfake_probability"]
     except DeepfakeUnavailable as exc:
-        # For the hackathon demo, if the model hasn't been trained yet, we will mock the response 
+        # For standalone demo testing, if the model hasn't been trained yet, we will mock the response 
         # instead of failing with a 503, so the UI can still be demonstrated.
         deepfake_prob = 0.88 if "fake" in (file.filename or "").lower() else 0.12
         deepfake = {"deepfake_probability": deepfake_prob, "available": False, "demo_mode": True}

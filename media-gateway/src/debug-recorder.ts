@@ -2,7 +2,7 @@
  * Debug Audio Recorder
  *
  * When SAVE_DEBUG_AUDIO=true, saves raw PCM received by the gateway to disk.
- * Strictly a hackathon debugging tool — not a production storage system.
+ * Strictly a local development debugging tool — not a production storage system.
  *
  * Lets us compare:
  *   CallVault local recording  vs  Gateway recording  vs  ML payload

@@ -1,4 +1,4 @@
-# VoiceShield model audit and SIH readiness
+# VoiceShield AI Model Audit and Course Project Evaluation
 
 Audit date: 7 September 2026. Scope: the active `ml.server` → media gateway → Next.js path, local checkpoints, and research score files referenced by this repository. No recordings were uploaded or published.
 
@@ -17,7 +17,7 @@ For the integrated models, the provisional default is **Indic iv15 = 1; Dhwani =
 - Ran the two research candidates on those same 86 usable three-second excerpts, using their own preprocessing contract.
 - Loaded the three local WavLM checkpoint variants and scored two development examples each as an architecture/loading check. Two examples cannot establish accuracy. `wavlm_asp_v1` and `ssl_4s_baseline` have **identical SHA-256 hashes** (`e7310f813ad7…`): they are duplicate checkpoints, not independent ensemble members. All three predict a low spoof score for the selected spoof example; compatibility is not correctness.
 
-Evidence: [historical report](validation/historical_audit.json), [live outputs](validation/live_audit.json), [research candidate outputs](validation/candidate_audit.json), [checkpoint compatibility outputs](validation/checkpoint_audit.json). JSON reports contain the detailed predictions, operating thresholds where applicable, errors and latency. Reproduction commands are in [the demo runbook](../SIH_DEMO.md).
+Evidence: [historical report](validation/historical_audit.json), [live outputs](validation/live_audit.json), [research candidate outputs](validation/candidate_audit.json), [checkpoint compatibility outputs](validation/checkpoint_audit.json). JSON reports contain the detailed predictions, operating thresholds where applicable, errors and latency. Reproduction commands are in [the demo runbook](../DEMO_RUNBOOK.md).
 
 Final software checks: **80 Python tests, 61 selected gateway tests and 9 frontend tests passed**. Gateway TypeScript build and Next.js production build passed. A [real-model service smoke test](validation/service_smoke.json) passed HTTP single/multiwindow uploads and WebSocket audio with all five models loaded; it also confirmed finite 192-dimensional ECAPA embeddings and repeat-input cosine approximately 1.0. That is a functional check, not speaker-verification accuracy. Database-backed tests were not signed off; the selected persistence regression uses a mocked database.
 
@@ -101,4 +101,4 @@ The Dhwani preprocessing and class order match its [official model card](https:/
 
 Ready to demonstrate the repaired local evidence pipeline and disclose these findings. Not signed off for worldwide fraud detection, calibrated percentages, automatic blocking, or identity authentication. PostgreSQL-backed persistence integration, a physical CallVault call, real same/different-speaker trials, fresh blind telephone data, access control and public deployment security remain unvalidated. Older `backend/app` routes include placeholder context and filename-based demo scores; use `ml.server` for this demo.
 
-SIH's official college guidance has emphasized novelty, practicality, impact and user experience. Present the working prototype, failure cases and measurable upgrade plan; do not substitute an unsupported accuracy claim for validation. The cited document is the **2024** guidance, not confirmation of 2026 eligibility or dates. [Official SIH college guidance](https://sih.gov.in/letters/Guidelines-College-SPOC.pdf).
+Project evaluation criteria emphasize novelty, practicality, impact and user experience. Present the working prototype, failure cases and measurable upgrade plan; do not substitute an unsupported accuracy claim for validation.

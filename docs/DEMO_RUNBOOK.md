@@ -1,6 +1,6 @@
-# SIH demo runbook
+# Project Demo Runbook
 
-Use the [model audit](research/SIH_MODEL_AUDIT.md) as the evidence and limitations sheet. The demo outputs a synthetic-audio evidence index, not a probability of fraud.
+Use the [model audit](research/MODEL_AUDIT.md) as the evidence and limitations sheet. The demo outputs a synthetic-audio evidence index, not a probability of fraud.
 
 ## Provision once, then rehearse offline
 
@@ -45,7 +45,7 @@ npm run dev
 
 Use the existing gateway `.env.example` to set the correct database and ML address. Do not run integration tests that clear tables against recorded user calls. The audit did not reset or provision the user's database.
 
-## Five-minute judging flow
+## Project Demonstration Walkthrough
 
 1. Show loaded model versions, the provisional weights and the meaning of `/100`.
 2. Upload a consented labeled genuine sample and a synthetic sample. Show each detector's output and the final evidence status, including disagreement.

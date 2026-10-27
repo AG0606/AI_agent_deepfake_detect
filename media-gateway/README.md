@@ -1,4 +1,4 @@
-# Media Gateway — Hackathon MVP
+# Media Gateway
 
 Real-time call-audio media gateway that receives audio from multiple sources (CallVault Android, FreeSWITCH), buffers it into exact 3-second PCM chunks, and forwards them to an ML service over WebSocket.
 
@@ -7,7 +7,7 @@ Real-time call-audio media gateway that receives audio from multiple sources (Ca
 ```
                          ┌──────────────────┐
                          │    ML SERVICE     │
-                         │  teammate service │
+                         │  inference backend │
                          └────────▲──────────┘
                                   │
                             WebSocket

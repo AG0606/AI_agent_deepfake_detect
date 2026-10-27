@@ -51,7 +51,7 @@ Audio, transcripts, identity, phone numbers, raw chunks, and sensitive call meta
 
 MVP uses a local Hardhat EVM JSON-RPC chain on port 8545, Solidity 0.8.24, OpenZeppelin `AccessControl`, ethers v6, Node `crypto` SHA-256, and RFC 8785/JCS through `json-canonicalize`. The minimal contract stores a mapping plus an `EvidenceAnchored` event. Only `WRITER_ROLE` can append; duplicate evidence IDs revert. There are no tokens, NFTs, or audio bytes on-chain.
 
-A local chain is ideal for the SIH demo: offline, reproducible, visually understandable transaction hashes, and EVM migration compatibility. Public chains introduce cost/privacy/latency. Hyperledger Fabric or private Besu is a stronger production option for known institutional validators, but is too operationally heavy for this MVP. At high volume, batch evidence hashes into a Merkle root and periodically anchor it; this reduces transactions while retaining per-record proofs.
+A local chain is ideal for project demonstrations and testing: offline, reproducible, visually understandable transaction hashes, and EVM migration compatibility. Public chains introduce cost/privacy/latency. Hyperledger Fabric or private Besu is a stronger production option for known institutional validators, but is too operationally heavy for this MVP. At high volume, batch evidence hashes into a Merkle root and periodically anchor it; this reduces transactions while retaining per-record proofs.
 
 ## Canonical evidence commitment
 
@@ -119,7 +119,7 @@ npm run dev
 
 Terminal 4: `cd frontend && npm run dev`. Open http://localhost:3000/calls.
 
-## SIH demo (2–3 minutes)
+## End-to-end audit demonstration (2–3 minutes)
 
 1. Start the four services above.
 2. Generate or receive a call. For a reproducible synthetic pipeline: `cd media-gateway && npm run send-test -- --duration 10 --source blockchain-e2e`.
